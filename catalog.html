@@ -2,21 +2,21 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>Gllacy Shop</title>
+		<title>Каталог - Gllacy Shop</title>
 	</head>
 	<body>
 		<header>
-			<nav class="main-nav">
-				<img src="img/logo.svg" alt="Gllacy Shop">
+			<nav class="main-navigation">
+				<a href="index.html"><img src="img/logo.svg" alt="Gllacy Shop" width="155" height="63"></a>
 				<ul class="site-navigation">
 					<li>
 						Каталог
-						<ul>
-							<li>Новинки</li>
-							<li>Сливочное</li>
-							<li>Щербеты</li>
-							<li>Фруктовый лёд</li>
-							<li>Мелюрин</li>
+						<ul class="site-sub-navigation">
+							<li><a href="#">Новинки</a></li>
+							<li><a href="#">Сливочное</a></li>
+							<li><a href="#">Щербеты</a></li>
+							<li><a href="#">Фруктовый лёд</a></li>
+							<li><a href="#">Мелюрин</a></li>
 						</ul>
 					</li>
 					<li>Доставка и оплата</li>
@@ -34,5 +34,46 @@
 				</p>
 			</nav>
 		</header>
+		<main class="main-content">
+			<ul class="breadcrumbs">
+				<li class="breadcrumbs-item"><a href="index.html">Главная</a></li>
+				<li class="breadcrumbs-item"><a href="#">Каталог</a></li>
+				<li class="breadcrumbs-item breadcrumbs-item-current">Сливочное</li>
+			</ul>
+			<h1>Сливочное мороженное</h1>
+			<section class="catalog-filter">
+				<h2 class="visually-hidden">Фильтры и сортировка</h2>
+				<form method="get" action="#" class="form-filter">
+					<p>
+						Сортировка:
+						<select class="sort-field">
+							<option value="sort-polular">по полярности</option>
+							<option value="sort-price">по цене</option>
+							<option value="sort-new">по новизне</option>
+						</select>
+					</p>
+					<p>
+						Цена: <span class="filter-min-price">100</span> руб. - <span class="filter-max-price">500</span> руб.
+						<!--отбор по цене-->
+					</p>
+					<p>
+						Жирность:
+						<input type="radio" name="fat[]" value="0" id="fat-0"> <label for="fat-0">0%</label>
+						<input type="radio" name="fat[]" value="10" id="fat-10" checked> <label for="fat-10">до 10%</label>
+						<input type="radio" name="fat[]" value="30" id="fat-30"> <label for="fat-30">до 30%</label>
+						<input type="radio" name="fat[]" value="30plus" id="fat-30-plus"> <label for="fat-30-plus">выше 30%</label>
+					</p>
+					<p>
+						Наполнители:
+						<input type="checkbox" name="fillers[]" value="chocolate" id="chocolate" checked> <label for="chocolate">шоколадные</label>
+						<input type="checkbox" name="fillers[]" value="sugar" id="sugar" checked> <label for="sugar">сахарные присыпки</label>
+						<input type="checkbox" name="fillers[]" value="fruit" id="fruit"> <label for="fruit">фрукты</label>
+						<input type="checkbox" name="fillers[]" value="syrop" id="syrop"> <label for="syrop">сиропы</label>
+						<input type="checkbox" name="fillers[]" value="jam" id="jam"> <label for="jam">джемы</label>
+					</p>
+					<input type="submit" name="send-filters" class="btn" value="Применить">
+				</form>
+			</section>
+		</main>
 	</body>
 </html>
